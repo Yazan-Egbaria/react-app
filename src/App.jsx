@@ -1,3 +1,15 @@
+import { useState } from "react";
+
 export default function App() {
-  return <div></div>;
+  const [currValue, setCurrValue] = useState(0);
+
+  const handleIncrement = () => {
+    setCurrValue((prevValue) => prevValue + 1);
+  };
+  return (
+    <div>
+      <button onClick={handleIncrement}>Increment</button>
+      <p>{currValue}</p>
+    </div>
+  );
 }
